@@ -7,7 +7,15 @@ FEATURES:
 • swapped left control with caps lock
 • swapped left alternative with less
 • circumflex and titles are dead
-• control+shift+[a-z] as alternative to meta+[a-z]
+• control+shift+[a-z] as alternative to meta+[a-z], for some reason C-S-x does not work
 • mapped meta+shift+[0-9]
 • mapped alt+control+[left|right] to control+x,[left|right]
+• mapped right supper to home
+• mapped menu to end
+• mapped shift+left super to compose (sysreq is still also compose)
+• control, shift, control+shift support for up,left,right,down
+• some support for o[control|shift|control+shift]+[home|end]
+• mapped meta+page[up|down], scrolls next buffer in Emacs
+• mapped altgr+shift+less to slash
+• heavier use of [shift +] alt graph
 
