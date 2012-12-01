@@ -1,1 +1,19 @@
 My customised Swedish keyboard layout
+
+
+FEATURES:
+
+• xterm compatible, Emacs is better if it thinks you are using xterm
+
+• switch to any of the 63 VT:s
+
+• swapped left control with caps lock
+
+• swapped left alternative with less
+
+• circumflex and titles are dead
+
+• control+shift+[a-z] as alternative to meta+[a-z]
+
+• mapped meta+shift+[0-9]
+
