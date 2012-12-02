@@ -7,9 +7,9 @@ use: install
 	loadkeys "$(MAP)"
 
 compress:
-	gzip -9f < "$(MAP).map" > ""$(MAP).map.gz""
+	gzip -9f < "$(MAP).map" > "$(MAP).map.gz"
 
-install:
+install: compress
 	install -m644 "$(MAP).map.gz" "/usr/share/kbd/keymaps/i386/qwerty/"
 
 clean:
