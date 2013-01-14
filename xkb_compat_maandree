@@ -1,0 +1,48 @@
+default xkb_compatibility "maandree"  {
+    include "basic"
+    augment "iso9995"
+    augment "mousekeys"
+    augment "accessx(full)"
+    augment "misc"
+    augment "xfree86"
+    augment "level5"
+    augment "caps(caps_lock)"
+
+    interpret  XF86_Switch_VT_13 {
+        action = SwitchScreen(Screen=13, !SameServer);
+    };
+    interpret  XF86_Switch_VT_14 {
+        action = SwitchScreen(Screen=14, !SameServer);
+    };
+    interpret  XF86_Switch_VT_15 {
+        action = SwitchScreen(Screen=15, !SameServer);
+    };
+    interpret  XF86_Switch_VT_16 {
+        action = SwitchScreen(Screen=16, !SameServer);
+    };
+    interpret  XF86_Switch_VT_17 {
+        action = SwitchScreen(Screen=17, !SameServer);
+    };
+    interpret  XF86_Switch_VT_18 {
+        action = SwitchScreen(Screen=18, !SameServer);
+    };
+    interpret  XF86_Switch_VT_19 {
+        action = SwitchScreen(Screen=19, !SameServer);
+    };
+    interpret  XF86_Switch_VT_20 {
+        action = SwitchScreen(Screen=20, !SameServer);
+    };
+    interpret  XF86_Switch_VT_21 {
+        action = SwitchScreen(Screen=21, !SameServer);
+    };
+    interpret  XF86_Switch_VT_22 {
+        action = SwitchScreen(Screen=22, !SameServer);
+    };
+    interpret  XF86_Switch_VT_23 {
+        action = SwitchScreen(Screen=23, !SameServer);
+    };
+    interpret  XF86_Switch_VT_24 {
+        action = SwitchScreen(Screen=24, !SameServer);
+    };
+
+};
