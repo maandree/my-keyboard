@@ -1,5 +1,5 @@
 #!sudo loadkeys
-#Install to /usr/share/kbd/keymaps/i386/qwerty/sv-maandree.map[.gz]
+#Install to /usr/share/kbd/keymaps/i386/qwerty/sv-maandree-net.map[.gz]
 
 charset "iso-8859-1"
 keymaps 0-6,8-14
@@ -9,43 +9,84 @@ include "linux-with-alt-and-altgr"
 strings as usual
 
 
+
+
+## reflect  <shift>{up,down,right,left}
+
 shift keycode 103 = F103
 shift keycode 108 = F108
 shift keycode 106 = F106
 shift keycode 105 = F105
+
+
+## reflect  <control>{up,down,right,left}
 
 control keycode 103 = F113
 control keycode 108 = F118
 control keycode 106 = F116
 control keycode 105 = F115
 
+
+## reflect  <control><shift>{up,down,right,left}
+
 control shift keycode 103 = F123
 control shift keycode 108 = F128
 control shift keycode 106 = F126
 control shift keycode 105 = F125
+
+
+## map  <alternative><shift>{right,left}  to  C-x {right,left}
+## and  <control><alternative>{right,left}  to  C-x {right,left}
 
 alt shift keycode 106 = F156
 alt shift keycode 105 = F155
 control alt keycode 106 = F156
 control alt keycode 105 = F155
 
+
+## map  <alternative graph>{right,left}  to  {end,home}
+
 altgr keycode 106 = F136
 altgr keycode 105 = F135
+
+
+## map  {menu,R-super}  to  {end,home}
+
 keycode 127 = F136
 keycode 126 = F135
+
+
+## map  <alternative>{menu,R-super}  to  legacy {home,end}
+
 alt keycode 127 = F146
 alt keycode 126 = F145
+
+
+## map  <alternative>{menu,R-super}  to  <shift>{home,end}
 
 shift alt keycode 127 = F168
 shift alt keycode 126 = F167
 
+
+## map  <alternative>{menu,R-super}  to  <control>{home,end}
+
 control alt keycode 127 = F178
 control alt keycode 126 = F177
+
+
+## map  <alternative>{menu,R-super}  to  <control><shift>{home,end}
 
 control shift alt keycode 127 = F188
 control shift alt keycode 126 = F187
 
+
+## map  <shift>L-super  to  compose
+
 shift keycode 125 = Compose
+
+
+
+## map  <alternative><shift>F{1..12}  to  console {13..24}
 
 alt shift keycode  59 = Console_13
 alt shift keycode  60 = Console_14
@@ -60,6 +101,9 @@ alt shift keycode  68 = Console_22
 alt shift keycode  87 = Console_23
 alt shift keycode  88 = Console_24
 
+
+## map  <control><shift>F{1..12}  to  console {13..24}
+
 control shift keycode  59 = Console_13
 control shift keycode  60 = Console_14
 control shift keycode  61 = Console_15
@@ -72,6 +116,9 @@ control shift keycode  67 = Console_21
 control shift keycode  68 = Console_22
 control shift keycode  87 = Console_23
 control shift keycode  88 = Console_24
+
+
+## map  <alternative><control><shift>F{1..12}  to  console {25..36}
 
 alt control shift keycode  59 = Console_25
 alt control shift keycode  60 = Console_26
@@ -86,6 +133,9 @@ alt control shift keycode  68 = Console_34
 alt control shift keycode  87 = Console_35
 alt control shift keycode  88 = Console_36
 
+
+## map  <alternative><alternative graph>F{1..12}  to  console {37..48}
+
 alt altgr keycode  59 = Console_37
 alt altgr keycode  60 = Console_38
 alt altgr keycode  61 = Console_39
@@ -98,6 +148,9 @@ alt altgr keycode  67 = Console_45
 alt altgr keycode  68 = Console_46
 alt altgr keycode  87 = Console_47
 alt altgr keycode  88 = Console_48
+
+
+## map  <control><alternative graph>F{1..12}  to  console {37..48}
 
 control altgr keycode  59 = Console_37
 control altgr keycode  60 = Console_38
@@ -112,6 +165,9 @@ control altgr keycode  68 = Console_46
 control altgr keycode  87 = Console_47
 control altgr keycode  88 = Console_48
 
+
+## map  <alternative><alternative graph><shift>F{1..12}  to  console {49..60}
+
 alt altgr shift keycode  59 = Console_49
 alt altgr shift keycode  60 = Console_50
 alt altgr shift keycode  61 = Console_51
@@ -125,221 +181,300 @@ alt altgr shift keycode  68 = Console_58
 alt altgr shift keycode  87 = Console_59
 alt altgr shift keycode  88 = Console_60
 
+
+## map  <alternative><alternative graph><shift>F{1..3}  to  console {61..63}
+
 alt altgr control keycode  59 = Console_61
 alt altgr control keycode  60 = Console_62
 alt altgr control keycode  61 = Console_63
 
 
-keycode   1 = Escape
-	alt     keycode   1 = Meta_Escape
+## map  escape and <alternative>escape  to  esc and M-esc
 
-keycode   2 = one              exclam
-	alt     keycode   2 = Meta_one
-	alt shift keycode 2 = F201
-	string F201 = "\033!"
-
-keycode   3 = two              quotedbl         at
-	control keycode   3 = nul
-	alt     keycode   3 = Meta_two
-	alt shift keycode 3 = F202
-	string F202 = "\033\""
-
-keycode   4 = three            numbersign       sterling
-	control keycode   4 = Escape
-	alt     keycode   4 = Meta_three
-	alt shift keycode 4 = F203
-	string F203 = "\033#"
-
-keycode   5 = four             ccedilla
-	control keycode   5 = Control_backslash
-	alt     keycode   5 = Meta_four
-	altgr   keycode   5 = dollar
-	alt shift keycode 5 = F204
-	string F204 = "\033ç"
-	
-keycode   6 = five             percent
-	control keycode   6 = Control_bracketright
-	alt     keycode   6 = Meta_five
-	alt shift keycode 6 = F205
-	string F205 = "\033%"
-
-keycode   7 = six              ampersand        notsign
-	control keycode   7 = Control_asciicircum
-	alt     keycode   7 = Meta_six
-	alt shift keycode 7 = F206
-	string F206 = "\033&"
-
-keycode   8 = seven            slash            braceleft
-	control keycode   8 = Control_underscore
-	alt     keycode   8 = Meta_seven
-	alt shift keycode 8 = F207
-	string F207 = "\033/"
-
-keycode   9 = eight            parenleft        bracketleft
-	control keycode   9 = Delete
-	alt     keycode   9 = Meta_eight
-	alt shift keycode 9 = F208
-	string F208 = "\033("
-
-keycode  10 = nine             parenright	bracketright
-	alt     keycode  10 = Meta_nine
-	alt shift keycode 10 = F209
-	string F209 = "\033)"
-
-keycode  11 = zero             equal		braceright
-	alt     keycode  11 = Meta_zero
-	alt shift keycode 11 = F210
-	string F210 = "\033="
-
-keycode  12 = plus       question         backslash
-	control keycode  12 = Control_underscore
-	alt     keycode  12 = Meta_minus
-
-keycode  13 = dead_acute  dead_grave
-	alt     keycode  13 = Meta_equal
-
-keycode  14 = Delete
-	alt     keycode  14 = Meta_Delete
-
-keycode  15 = Tab
-	shift	keycode  15 = Meta_Tab
-	alt     keycode  15 = Meta_Tab
-
-control shift keycode 86 = Meta_q
-control shift keycode 17 = Meta_w
-control shift keycode 18 = Meta_e
-control shift keycode 19 = Meta_r
-control shift keycode 20 = Meta_t
-control shift keycode 21 = Meta_y
-control shift keycode 22 = Meta_u
-control shift keycode 23 = Meta_i
-control shift keycode 24 = Meta_o
-control shift keycode 25 = Meta_p
-
-keycode  26 = +aring          +Aring
-	control keycode  26 = Escape
-	alt     keycode  26 = Meta_bracketleft
-
-keycode  27 = dead_diaeresis   dead_circumflex        dead_tilde
-	control keycode  27 = Control_bracketright
-	alt     keycode  27 = Meta_bracketright
-
-keycode  28 = Return
-	alt     keycode  28 = Meta_Control_m
-
-keycode  29 = Caps_Lock
-
-control shift keycode 30 = Meta_a
-control shift keycode 31 = Meta_s
-control shift keycode 32 = Meta_d
-control shift keycode 33 = Meta_f
-control shift keycode 34 = Meta_j
-control shift keycode 35 = Meta_h
-control shift keycode 36 = Meta_l
-control shift keycode 37 = Meta_k
-control shift keycode 38 = Meta_l
-
-keycode  39 = +odiaeresis       +Odiaeresis
-	alt     keycode  39 = Meta_semicolon
-
-keycode  40 = +adiaeresis       +Adiaeresis
-	control keycode  40 = Control_g
-	alt     keycode  40 = Meta_apostrophe
-
-keycode  41 = section          degree		onehalf
-	control keycode  41 = nul
-	alt     keycode  41 = Meta_grave
-
-keycode  42 = Shift
-
-keycode  43 = apostrophe       asterisk
-	control keycode  43 = Control_backslash
-	alt     keycode  43 = Meta_backslash
-
-control shift keycode 44 = Meta_z
-control shift keycode 45 = Meta_x
-control shift keycode 46 = Meta_c
-control shift keycode 47 = Meta_v
-control shift keycode 48 = Meta_b
-control shift keycode 49 = Meta_n
-control shift keycode 50 = Meta_m
-
-keycode  51 = comma            semicolon
-	alt     keycode  51 = Meta_comma
-
-keycode  52 = period           colon
-	alt     keycode  52 = Meta_period
-
-keycode  53 = minus            underscore
-	control keycode  53 = Delete
-	alt     keycode  53 = Meta_slash
-	shift control keycode  53 = Control_underscore
-
-keycode  54 = Shift
-
-keycode  56 = less             greater          bar       slash
-	alt     keycode  86 = Meta_less
-
-keycode  57 = space space space F190
-	control keycode  57 = nul
-	alt     keycode  57 = Meta_space
-string F190 = " "
-
-keycode  58 = Control
-
-keycode  16 = Alt
-keycode  86 = q
-
-keycode  97 = Control
-
-alt keycode 104 = F195
-alt keycode 109 = F196
-control shift keycode 104 = F195
-control shift keycode 109 = F196
-
-altgr keycode 16 = F200
-altgr keycode 17 = F201
-altgr keycode 18 = F202
-altgr keycode 19 = F203
-altgr keycode 22 = F236
-altgr keycode 30 = F204
-altgr keycode 31 = F205
-altgr keycode 32 = F206
-altgr keycode 33 = F207
-altgr keycode 33 = F207
-altgr keycode 38 = F208
-altgr keycode 44 = F209
-altgr keycode 45 = F210
-altgr keycode 46 = F211
-altgr keycode 47 = F212
-altgr keycode 48 = F213
-altgr keycode 49 = F214
-altgr keycode 50 = F215
-
-shift altgr keycode 16 = F216
-shift altgr keycode 17 = F217
-shift altgr keycode 18 = F218
-shift altgr keycode 19 = F219
-shift altgr keycode 20 = F220
-shift altgr keycode 21 = F221
-shift altgr keycode 22 = F235
-shift altgr keycode 30 = F222
-shift altgr keycode 31 = F223
-shift altgr keycode 32 = F224
-shift altgr keycode 33 = F225
-shift altgr keycode 34 = F226
-shift altgr keycode 35 = F227
-shift altgr keycode 38 = F228
-shift altgr keycode 44 = F229
-shift altgr keycode 45 = F230
-shift altgr keycode 46 = F231
-shift altgr keycode 47 = F232
-shift altgr keycode 48 = F233
-shift altgr keycode 49 = F234
+keycode			1 = Escape
+alt keycode		1 = Meta_Escape
 
 
-string Home = "\033OH"
-string End = "\033OF"
+## map  backspace and <alternative>backspace  to  backspace and M-backspace
+
+keycode			14 = Delete
+alt keycode		14 = Meta_Delete
+
+
+## map  tab, <shift>tab and <alternative>tab  to  tab, backstab = M-tab and M-tab = backtab
+
+keycode			15 = Tab
+shift keycode		15 = Meta_Tab
+alt keycode		15 = Meta_Tab
+
+
+## map  space, <shift>space and <alternative graph>space  all to  space  and  <shift><alternative graph>space  to  nbsp
+## and  <control>space and <alternative>space  to  C-@  and  M-space
+
+keycode			57 = space		space			space			F190
+control keycode		57 = nul
+alt keycode		57 = Meta_space
+
+
+
+
+## [<normal>       <shift>               <alternative graph>               <shift><alternative graph>]
+## [<alternative>  <alternative><shift>  <alternative><alternative graph>  <alternative><shift><alternative graph>]
+## [<control>      <control><shift>      <control><alternative graph>      <control><shift><alternative graph>]
+
+## § 1 2 3 4 5 6 7 8 9 0 + ´            C-  <control>
+## q w e r t y u i o p å ^              M-  <meta>
+## a s d f g h j k l ö ä '              D-  <dead>
+## < z x c v b n m , . -
+
+
+
+## § = [§ ½ °] [M-`] [C-@]
+
+keycode			41 = section		onehalf			degree
+alt keycode		41 = Meta_grave
+control keycode		41 = nul
+
+
+## 1 = [1 ! ¡ ¹] [M-1 M-! M-¡ M-¹] []
+
+keycode			2 = one			exclam			F104			F109
+alt keycode		2 = Meta_one
+alt shift keycode	2 = F201
+alt altgr keycode	2 = F107
+alt shift altgr keycode	2 = F114
+
+
+## 2 = [2 " @ ²] [M-2 M-" M-@ M-²] [C-@]
+
+keycode			3 = two			quotedbl		at			F110
+alt keycode		3 = Meta_two
+alt shift keycode	3 = F202
+alt altgr keycode	3 = Meta_at
+alt shift altgr keycode	3 = F117
+control keycode		3 = nul
+
+
+## 3 = [3 # £ ³] [M-3 M-# M-£ M-³] [esc]
+
+keycode			4 = three		numbersign		sterling		F111
+alt keycode		4 = Meta_three
+alt shift keycode	4 = F203
+alt altgr keycode	4 = Meta_sterling
+alt shift altgr keycode	4 = F119
+control keycode		4 = Escape
+
+
+## 4 = [4 ç $ ¼] [M-4 M-ç M-$ M-¼] [C-\]
+
+keycode			5 = four		ccedilla		dollar			F112
+alt keycode		5 = Meta_four
+alt shift keycode	5 = F204
+alt altgr keycode	5 = Meta_dollar
+alt shift altgr keycode	5 = F120
+control keycode		5 = Control_backslash
+
+
+## 5 = [5 % € ¢] [M-5 M-% M-€ M-¢] [C-]]
+
+keycode			6 = five		percent			F101			F121
+alt keycode		6 = Meta_five
+alt shift keycode	6 = F205
+alt altgr keycode	6 = F102
+alt shift altgr keycode	6 = F122
+control keycode		6 = Control_bracketright
+
+
+## 6 = [6 & ¥ ¬] [M-6 M-& M-¥ M-¬] [C-^]
+
+keycode			7 = six			ampersand		F124			notsign
+alt keycode		7 = Meta_six
+alt shift keycode	7 = F206
+alt altgr keycode	7 = F127
+alt shift altgr keycode	7 = Meta_notsign
+control keycode		7 = Control_asciicircum
+
+
+## 7 = [7 / {] [M-7 M-/ M-{] [C-_]
+
+keycode			8 = seven		slash			braceleft
+alt keycode		8 = Meta_seven
+alt shift keycode	8 = F207
+alt altgr keycode	8 = Meta_braceleft
+control keycode		8 = Control_underscore
+
+
+## 8 = [8 ( [] [M-8 M-( M-[] [del]
+
+keycode			9 = eight		parenleft		bracketleft
+alt keycode		9 = Meta_eight
+alt shift keycode	9 = F208
+alt altgr keycode	9 = Meta_bracketleft
+control keycode		9 = Delete
+
+
+## 9 = [9 ) ]] [M-9 M-) M-]] []
+
+keycode			10 = nine		parenright		bracketright
+alt keycode		10 = Meta_nine
+alt shift keycode	10 = F209
+alt altgr keycode	10 = Meta_bracketright
+
+
+## 0 = [0 = }] [M-0 M-= M-}] []
+
+keycode			11 = zero		equal			braceright
+alt keycode		11 = Meta_zero
+alt shift keycode	11 = F210
+alt altgr keycode	11 = Meta_braceright
+
+
+## + = [+ ? \] [M--] [C-_]
+
+keycode			12 = plus		question		backslash
+alt keycode		12 = Meta_minus
+control keycode		12 = Control_underscore
+
+
+## ´ = [D-´ D-`] [M-=] []
+
+keycode			13 = dead_acute		dead_grave
+alt keycode		13 = Meta_equal
+
+
+control shift keycode	86 = Meta_q
+control shift keycode	17 = Meta_w
+control shift keycode	18 = Meta_e
+control shift keycode	19 = Meta_r
+control shift keycode	20 = Meta_t
+control shift keycode	21 = Meta_y
+control shift keycode	22 = Meta_u
+control shift keycode	23 = Meta_i
+control shift keycode	24 = Meta_o
+control shift keycode	25 = Meta_p
+
+keycode			26 = +aring		+Aring
+control keycode		26 = Escape
+alt keycode		26 = Meta_bracketleft
+
+keycode			27 = dead_diaeresis	dead_circumflex		dead_tilde
+control keycode		27 = Control_bracketright
+alt keycode		27 = Meta_bracketright
+
+keycode			28 = Return
+alt keycode		28 = Meta_Control_m
+
+keycode			29 = Caps_Lock
+
+control shift keycode	30 = Meta_a
+control shift keycode	31 = Meta_s
+control shift keycode	32 = Meta_d
+control shift keycode	33 = Meta_f
+control shift keycode	34 = Meta_j
+control shift keycode	35 = Meta_h
+control shift keycode	36 = Meta_l
+control shift keycode	37 = Meta_k
+control shift keycode	38 = Meta_l
+
+keycode			39 = +odiaeresis	+Odiaeresis
+alt keycode		39 = Meta_semicolon
+
+keycode			40 = +adiaeresis	+Adiaeresis
+control keycode		40 = Control_g
+alt keycode		40 = Meta_apostrophe
+
+keycode			42 = Shift
+
+keycode			43 = apostrophe		asterisk
+control keycode		43 = Control_backslash
+alt keycode		43 = Meta_backslash
+
+control shift keycode	44 = Meta_z
+control shift keycode	45 = Meta_x
+control shift keycode	46 = Meta_c
+control shift keycode	47 = Meta_v
+control shift keycode	48 = Meta_b
+control shift keycode	49 = Meta_n
+control shift keycode	50 = Meta_m
+
+keycode			51 = comma		semicolon
+alt keycode		51 = Meta_comma
+
+keycode			52 = period		colon
+alt keycode		52 = Meta_period
+
+keycode			53 = minus		underscore
+control keycode		53 = Delete
+alt keycode		53 = Meta_slash
+shift control keycode	53 = Control_underscore
+
+keycode			54 = Shift
+
+keycode			56 = less		greater			bar			slash
+alt keycode		86 = Meta_less
+
+keycode			58 = Control
+
+keycode			16 = Alt
+keycode			86 = q
+
+keycode			97 = Control
+
+alt keycode		104 = F195
+alt keycode		109 = F196
+control shift keycode	104 = F195
+control shift keycode	109 = F196
+
+
+
+
+## map  <alternative graph>{qweruasdflzxcvbnm}  to  {‽ł↑®▄↔←↓→ł«»©“”│µ}
+
+altgr keycode		16 = F200
+altgr keycode		17 = F201
+altgr keycode		18 = F202
+altgr keycode		19 = F203
+altgr keycode		22 = F236
+altgr keycode		30 = F204
+altgr keycode		31 = F205
+altgr keycode		32 = F206
+altgr keycode		33 = F207
+altgr keycode		38 = F208
+altgr keycode		44 = F209
+altgr keycode		45 = F210
+altgr keycode		46 = F211
+altgr keycode		47 = F212
+altgr keycode		48 = F213
+altgr keycode		49 = F214
+altgr keycode		50 = F215
+
+
+## map  <shift><alternative graph>{qwertyuasdfglzxcvbn}  to  {⸘Ł┬┼┌┐▀↕├┴┤└┘Ł⁅⁆’⸮‘─}
+
+shift altgr keycode	16 = F216
+shift altgr keycode	17 = F217
+shift altgr keycode	18 = F218
+shift altgr keycode	19 = F219
+shift altgr keycode	20 = F220
+shift altgr keycode	21 = F221
+shift altgr keycode	22 = F235
+shift altgr keycode	30 = F222
+shift altgr keycode	31 = F223
+shift altgr keycode	32 = F224
+shift altgr keycode	33 = F225
+shift altgr keycode	34 = F226
+shift altgr keycode	35 = F227
+shift altgr keycode	38 = F228
+shift altgr keycode	44 = F229
+shift altgr keycode	45 = F230
+shift altgr keycode	46 = F231
+shift altgr keycode	47 = F232
+shift altgr keycode	48 = F233
+shift altgr keycode	49 = F234
+
+
+
+############################
 
 string F103 = "\033[1;2A"
 string F108 = "\033[1;2B"
@@ -415,4 +550,33 @@ string F231 = "⸮"
 string F232 = "‘"
 string F233 = "’"
 string F234 = "─"
+
+string F190 = " "
+string F201 = "\033!"
+string F202 = "\033\""
+string F203 = "\033#"
+string F204 = "\033ç"
+string F205 = "\033%"
+string F206 = "\033&"
+string F207 = "\033/"
+string F208 = "\033("
+string F209 = "\033)"
+string F210 = "\033="
+
+string F101 = "€"
+string F102 = "\033€"
+string F104 = "¡"
+string F107 = "\033¡"
+string F109 = "¹"
+string F110 = "²"
+string F111 = "³"
+string F112 = "¼"
+string F114 = "\033¹"
+string F117 = "\033²"
+string F119 = "\033³"
+string F120 = "\033¼"
+string F121 = "¢"
+string F122 = "\033¢"
+string F124 = "¥"
+string F127 = "\033¥"
 
