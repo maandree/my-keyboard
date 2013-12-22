@@ -379,7 +379,7 @@ control shift keycode	38 = Meta_l
 keycode			39 = +odiaeresis	+Odiaeresis
 alt keycode		39 = Meta_semicolon
 
-keycode			40 = +adiaeresis	+Adiaeresis
+keycode			40 = +adiaeresis	+Adiaeresis		slash			bar
 control keycode		40 = Control_g
 alt keycode		40 = Meta_apostrophe
 
@@ -403,7 +403,7 @@ alt keycode		51 = Meta_comma
 keycode			52 = period		colon
 alt keycode		52 = Meta_period
 
-keycode			53 = minus		underscore
+keycode			53 = minus		underscore		slash			backslash
 control keycode		53 = Delete
 alt keycode		53 = Meta_slash
 shift control keycode	53 = Control_underscore
