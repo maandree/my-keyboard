@@ -353,7 +353,7 @@ control shift keycode	23 = Meta_i
 control shift keycode	24 = Meta_o
 control shift keycode	25 = Meta_p
 
-keycode			26 = +aring		+Aring
+keycode			26 = +aring		+Aring			slash			bar
 control keycode		26 = Escape
 alt keycode		26 = Meta_bracketleft
 
