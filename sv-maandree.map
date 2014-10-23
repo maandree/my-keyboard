@@ -222,17 +222,17 @@ alt keycode		57 = Meta_space
 ## [<alternative>  <alternative><shift>  <alternative><alternative graph>  <alternative><shift><alternative graph>]
 ## [<control>      <control><shift>      <control><alternative graph>      <control><shift><alternative graph>]
 
-## § 1 2 3 4 5 6 7 8 9 0 + ´            C-  <control>
+## 0 1 2 3 4 5 6 7 8 9 § + ´            C-  <control>
 ## q w e r t y u i o p å ^              M-  <meta>
 ## a s d f g h j k l ö ä '              D-  <dead>
 ## < z x c v b n m , . -
 
 
 
-## § = [§ ½ °] [M-`] [C-@]
+## 0 = [0 ½ °] [M-0] [C-@]
 
-keycode			41 = section		onehalf			degree
-alt keycode		41 = Meta_grave
+keycode			41 = zero		onehalf			degree
+alt keycode		41 = Meta_zero
 control keycode		41 = nul
 
 
@@ -321,10 +321,10 @@ alt shift keycode	10 = F209
 alt altgr keycode	10 = Meta_bracketright
 
 
-## 0 = [0 = }] [M-0 M-= M-}] []
+## § = [§ = }] [M-` M-= M-}] []
 
-keycode			11 = zero		equal			braceright
-alt keycode		11 = Meta_zero
+keycode			11 = section		equal			braceright
+alt keycode		11 = Meta_grave
 alt shift keycode	11 = F210
 alt altgr keycode	11 = Meta_braceright
 
