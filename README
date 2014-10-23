@@ -6,6 +6,7 @@ FEATURES:
 • switch to any of the 63 VT:s
 • swapped left control with caps lock
 • swapped (left alternative → less → q)
+• swapped § and 0 for level 1 and for alternative
 • circumflex and title are dead
 • control+shift+[a-z] as alternative to meta+[a-z], for some reason C-S-x does not work
 • mapped meta+shift+[0-9]
