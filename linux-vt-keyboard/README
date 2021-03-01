@@ -1,6 +1,5 @@
 My customised Swedish keyboard layout
 
-
 FEATURES:
 • xterm compatible, Emacs is better if it thinks you are using xterm
 • switch to any of the 63 VT:s
@@ -19,4 +18,3 @@ FEATURES:
 • mapped meta+page[up|down], scrolls next buffer in Emacs
 • mapped altgr+shift+less to slash
 • heavier use of [shift +] alt graph
-

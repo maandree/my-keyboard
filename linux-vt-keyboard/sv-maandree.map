@@ -579,4 +579,3 @@ string F121 = "¢"
 string F122 = "\033¢"
 string F124 = "¥"
 string F127 = "\033¥"
-
